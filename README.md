@@ -11,14 +11,18 @@ Container Application Framework
 
 ## Example
  - See www/auth/index.php
+ 
+## Container Access in sub-apps
+Note that the sub-apps do not have access directly to the container, this
+is to prevent sub-apps overwriting other module's settings. Sub-apps have
+read access to the container through the ContainerInterop interface.
+
+The ContainerProxy disables the \ArrayAccess component of the container.
+
 
 ## Todo
 
  - Write composer script to auto-copy the public directories to `www/`
- - Provide a proxy to the Slim objects that implement a `namespace` to 
- what the sub-apps can access
-   - Ideally it would be Read-Only *, and Write-Only `namespace`, that is 
-   to say it can read anything from the container, but can only write changes to it's namespace
 
 ## Thoughts
 

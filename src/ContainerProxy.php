@@ -16,6 +16,7 @@ use Interop\Container\ContainerInterface;
  *
  * Offer Read-Only access to container
  * Write Only to a specific Namespace
+ * This Proxy disables the use of \ArrayAccess
  *
  * @package Hydra
  */
