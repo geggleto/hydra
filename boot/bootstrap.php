@@ -9,3 +9,5 @@
 include "../vendor/autoload.php";
 
 $container = new Slim\Container();
+
+//Define Global Services

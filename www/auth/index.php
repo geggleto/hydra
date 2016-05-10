@@ -3,7 +3,7 @@
 //Step 1: Include the Global Bootstrap
 require '../../boot/bootstrap.php';
 
-//Step 2: Define Services via $container global
+//Step 2: Define Local Services via $container global
 
 
 //Step 3: Construct App
