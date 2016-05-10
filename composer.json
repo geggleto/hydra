@@ -14,5 +14,10 @@
   },
   "scripts" : {
 
+  },
+  "autoload" : {
+    "psr-4" : {
+      "Hydra\\" : "src"
+    }
   }
 }
