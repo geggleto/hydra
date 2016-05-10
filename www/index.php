@@ -1,14 +1,14 @@
 <?php
-include "../../vendor/autoload.php";
+include "../vendor/autoload.php";
 
 //Step 1: Include the Global Bootstrap
-require '../../boot/bootstrap.php';
+require '../boot/bootstrap.php';
 
 //Step 2: Define Services via $container global
 
 
 //Step 3: Construct App
-require '../../boot/app.php';
+require '../boot/app.php';
 
 //Step 4: Assign Routes
 

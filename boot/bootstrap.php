@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Glenn
- * Date: 2016-05-10
- * Time: 1:37 PM
- */
-
-include "../vendor/autoload.php";
 
 $container = new Slim\Container();
 
-//Define Global Services
+//Define Global Services, these services will be available to all sub-applications
