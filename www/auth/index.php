@@ -9,7 +9,7 @@ require '../../boot/bootstrap.php';
 
 
 //Step 3: Construct App
-require '../../boot/app.php';
+$app = new Slim\App($container);
 
 //Step 4: Assign Routes
 
