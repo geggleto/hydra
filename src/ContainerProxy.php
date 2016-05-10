@@ -11,6 +11,14 @@ namespace Hydra;
 
 use Interop\Container\ContainerInterface;
 
+/**
+ * Class ContainerProxy
+ *
+ * Offer Read-Only access to container
+ * Write Only to a specific Namespace
+ *
+ * @package Hydra
+ */
 class ContainerProxy
 {
     /** @var ContainerInterface */
@@ -55,7 +63,7 @@ class ContainerProxy
      * @param $namespace string
      */
     public function addNamespace($namespace) {
-        $this->containerInterface[(string)$namespace] = [];
+        $this->containerInterface['modules'][(string)$namespace] = [];
     }
 
     /**
@@ -64,6 +72,15 @@ class ContainerProxy
      * @param $value
      */
     public function add($namespace, $key, $value) {
-        $this->containerInterface[(string)$namespace][(string)$key] = $value;
+        $this->containerInterface['modules'][(string)$namespace][(string)$key] = $value;
+    }
+
+    /**
+     * @param $namespace string
+     * @param $key string
+     * @return mixed
+     */
+    public function getNamespace($namespace, $key) {
+        return $this->containerInterface['modules'][(string)$namespace][$key];
     }
 }
